@@ -20,6 +20,11 @@ function colorfulLog(message: string, color: Color, background?: Backgroud ) {
     console.log(`${textColor}${backgroudColor}${message}${RESET_COLOR_SYMBOL}`);
 }
 
+function logGloryToUkraine() {    
+    colorfulLog("  SLAVA  ", "yellow", "cyan")
+    colorfulLog(" UKRAINI ", "cyan", "yellow")
+}
+
 function initialFunction(message: string) {
     console.log('initialFunction: ', message);
 }
@@ -30,3 +35,5 @@ if(userInput){
     initialFunction(userInput)
     colorfulLog(userInput, "yellow")
 }
+
+logGloryToUkraine()
