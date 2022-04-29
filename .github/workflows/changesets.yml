@@ -14,32 +14,20 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+      
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 16.x
         cache: 'yarn'
-    - run: yarn
-    - name: Changeset Action
-      # You may pin to the exact commit or the version.
-      # uses: generates/changeset-action@b134b46d61041218a68dc3dd8580019aa51f5e9d
-      uses: generates/changeset-action@v3.0.0
-      with:
-        # The SemVer type <major|minor|patch> to use when running manually and so the "changeset:<type>" pull request label won't be used.
-        type: "major"
         
-        # The package name to use when running manually. If not specified, it will be determined by looking at the closest package.json to the first changed file.
-        # name: # optional
-        
-        # The changeset summary to use when running manually. If not specified, the pull request title will be used.
-        # summary: # optional
-        
-        # GitHub token to use when getting changed files.
-        # token: # optional
+    - name: Install Dependencies
+      run: yarn
+
+    - name: Create Release Pull Request
+      uses: changesets/action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
