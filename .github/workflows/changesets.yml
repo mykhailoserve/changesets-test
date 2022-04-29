@@ -4,8 +4,8 @@
 name: Node.js CI
 
 permissions:
-  contents: read/write
-  pull-requests: read/write
+  contents: write
+  pull-requests: write
 
 on:
   push:
