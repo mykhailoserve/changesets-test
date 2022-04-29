@@ -4,4 +4,8 @@ function initialFunction(message: string) {
     console.log('initialFunction: ', message);
 }
 
-initialFunction('Hello world')
+const userInput = process.argv[2]
+
+if(userInput){    
+    initialFunction(userInput)
+}
