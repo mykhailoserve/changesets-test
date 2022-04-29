@@ -33,7 +33,7 @@ jobs:
       uses: generates/changeset-action@v3.0.0
       with:
         # The SemVer type <major|minor|patch> to use when running manually and so the "changeset:<type>" pull request label won't be used.
-        type: major
+        type: "major"
         
         # The package name to use when running manually. If not specified, it will be determined by looking at the closest package.json to the first changed file.
         # name: # optional
