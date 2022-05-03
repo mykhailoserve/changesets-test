@@ -1,5 +1,12 @@
 # changesets-test
 
+## 2.0.1
+
+### Patch Changes
+
+- 09efdd8: fhdsjkalhfldska
+- fdsa
+
 ## 2.0.0
 
 ### Major Changes
