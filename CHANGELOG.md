@@ -1,5 +1,11 @@
 # changesets-test
 
+## 2.0.2
+
+### Patch Changes
+
+- 0ff4d02: test release
+
 ## 2.0.1
 
 ### Patch Changes
