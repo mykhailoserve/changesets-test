@@ -9,7 +9,7 @@
     "build": "echo 'build'",
     "changeset": "changeset",
     "prerelease": "yarn test && yarn build",
-    "release": "echo 'Release'"
+    "release": "changeset publish"
   },
   "keywords": [],
   "author": "",
