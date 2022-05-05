@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node ."
+    "start": "ts-node .",
+    "test": "echo 'test'",
+    "build": "echo 'build'",
+    "changeset": "changeset",
+    "prerelease": "yarn test && yarn build",
+    "release": "echo 'Release'"
   },
   "keywords": [],
   "author": "",
